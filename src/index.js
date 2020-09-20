@@ -1,3 +1,5 @@
+// Startup point for the server side application
+import 'babel-polyfill';
 import express from 'express';
 
 import renderer from './helpers/renderer';
