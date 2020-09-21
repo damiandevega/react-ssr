@@ -29812,8 +29812,8 @@ var mapStateToProps = function mapStateToProps(state) {
   return { users: state.users };
 };
 
-var loadData = function loadData() {
-  console.log('loading data');
+var loadData = function loadData(store) {
+  return store.dispatch((0, _actions.fetchUsers)());
 };
 
 exports.loadData = loadData;
