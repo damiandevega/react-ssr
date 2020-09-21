@@ -25957,7 +25957,8 @@ exports.default = [{
   exact: true
 }, {
   path: '/users',
-  component: _UsersList2.default
+  component: _UsersList2.default,
+  loadData: _UsersList.loadData
 }];
 
 /***/ }),
@@ -29743,6 +29744,7 @@ module.exports = function spread(callback) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.loadData = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -29810,6 +29812,11 @@ var mapStateToProps = function mapStateToProps(state) {
   return { users: state.users };
 };
 
+var loadData = function loadData() {
+  console.log('loading data');
+};
+
+exports.loadData = loadData;
 exports.default = (0, _reactRedux.connect)(mapStateToProps, { fetchUsers: _actions.fetchUsers })(UsersList);
 
 /***/ }),
