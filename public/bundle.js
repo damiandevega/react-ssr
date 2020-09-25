@@ -25910,10 +25910,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
 var _App = __webpack_require__(486);
 
 var _App2 = _interopRequireDefault(_App);
@@ -40003,7 +39999,11 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NotFoundPage = function NotFoundPage() {
+var NotFoundPage = function NotFoundPage(_ref) {
+  var _ref$staticContext = _ref.staticContext,
+      staticContext = _ref$staticContext === undefined ? {} : _ref$staticContext;
+
+  staticContext.notFound = true;
   return _react2.default.createElement(
     'h1',
     null,
