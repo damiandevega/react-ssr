@@ -9,7 +9,7 @@ class AdminsListPage extends Component {
   }
 
   renderAdmins() {
-    this.props.admins.map((admin) => {
+    return this.props.admins.map((admin) => {
       return <li key={admin.id}>{admin.name}</li>;
     });
   }
@@ -18,7 +18,7 @@ class AdminsListPage extends Component {
     return (
       <div>
         <h3>Protected List of Admins</h3>
-        <ul>{this.renderAdmins}</ul>
+        <ul>{this.renderAdmins()}</ul>
       </div>
     );
   }
